@@ -1,0 +1,70 @@
+.sign-up {
+  outline: forestgreen;
+
+  background-color: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
+  flex-basis: 79.5%;
+  h2 {
+    padding: 2px 7px;
+    margin-top: 20px;
+    margin-left: 105px;
+    font-size: 32px;
+    padding-left: 15px;
+  }
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px;
+    .content {
+      flex-basis: 40%;
+      padding: 25px 15px;
+      text-align: center;
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      label {
+        color: grey;
+        position: absolute;
+        letter-spacing: 1px;
+      }
+      .shrink {
+        top: -6px;
+        font-size: 12px;
+        color: #35ba38;
+        transition: all 0.05s ease-in-out;
+      }
+      input {
+        border-top: none;
+        border-right: none;
+        outline: none;
+        border-left: none;
+        border-bottom: 1px solid grey;
+        width: 65%;
+        padding: 5px;
+        margin-top: 7px;
+      }
+      input:focus {
+        border-bottom: 1px solid #35ba38;
+      }
+    }
+    .btn-box {
+      flex-basis: 80%;
+      text-align: center;
+
+      margin-top: 25px;
+      .btn {
+        letter-spacing: 1px;
+        color: #fff;
+        background-color: rgb(50, 135, 50);
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 12px 5px;
+        font-weight: 600;
+      }
+    }
+  }
+}

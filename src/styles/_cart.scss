@@ -1,0 +1,63 @@
+$mobile: 300px;
+// (min-width: 300px) and (max-width: 800px)
+$ipad: 768px;
+$bigIpad: 1024px;
+@mixin mobile {
+  @media (min-width: #{$mobile})  and (max-width : $ipad) {
+    @content;
+  }
+}
+
+@mixin big-ipad {
+  @media (min-width: #{$bigIpad}) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+
+.cart {
+  // grid-column: 1/2;
+  // grid-row: 1/2;
+  background: #f3fbf3;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  display: inline-block !important;
+  flex-basis: 20%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
+  ul {
+    display: inline-block;
+    padding: 5px;
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-top: 20px;
+      &.far-left {
+        margin-left: -12px;
+        .las {
+          color: darken(rgb(78, 161, 78), 10%);
+          font-size: 25px;
+        }
+      }
+      &.far-right {
+        margin-left: 5px;
+
+        .lar {
+          color: grey;
+          font-size: 25px;
+        }
+      }
+    }
+    @include mobile() {
+      width: 70%;
+      display: inline-block;
+    }
+  }
+}

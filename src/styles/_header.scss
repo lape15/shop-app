@@ -1,0 +1,66 @@
+$mobile: 300px;
+// (min-width: 300px) and (max-width: 800px)
+$ipad: 768px;
+@mixin mobile {
+  @media (min-width: #{$mobile})  and (max-width : $ipad) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+nav {
+  flex-basis: 79%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  background-color: white;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.02);
+  padding: 5px;
+  ul.left {
+    flex-basis: 45%;
+    display: inline;
+    li {
+      list-style: none;
+      display: inline !important;
+      cursor: pointer;
+      margin-left: 5px;
+      color: gray;
+
+      padding: 5px;
+      transform-origin: center;
+      .las {
+        color: gray;
+        font-size: 22px;
+      }
+      @include mobile() {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  ul.right {
+    flex-basis: 45%;
+    display: inline;
+    li {
+      list-style: none;
+      display: inline !important;
+      cursor: pointer;
+      margin-left: 5px;
+      padding: 5px;
+      transform-origin: center;
+      color: #35ba38;
+      cursor: pointer;
+      .link {
+        color: #35ba38;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+ul {
+  padding: 5px;
+}

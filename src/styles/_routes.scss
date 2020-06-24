@@ -1,0 +1,34 @@
+$mobile: 300px;
+// (min-width: 300px) and (max-width: 800px)
+$ipad: 768px;
+$bigIpad: 1024px;
+@mixin mobile {
+  @media (min-width: #{$mobile})  and (max-width : $ipad) {
+    @content;
+  }
+}
+
+@mixin big-ipad {
+  @media (min-width: #{$bigIpad}) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media (min-width: #{$ipad}) {
+    @content;
+  }
+}
+
+.routes {
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: repeat(4, 1fr);
+  gap: 0.1%;
+  display: flex;
+  flex-flow: row wrap;
+  max-height: 100%;
+
+  @include mobile() {
+    display: block;
+  }
+}
