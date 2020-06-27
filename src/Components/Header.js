@@ -11,9 +11,13 @@ const Header = () => {
       </ul>
 
       <ul className="right">
-        <li>
-          <NavLink to={"/create"} className="link">
-            Signup
+        <li className="auth">
+          <span className="link">Menu</span>
+          <NavLink to={"/create"} className="link b">
+            <button> LOGIN </button>
+          </NavLink>
+          <NavLink to={"/login"} className="link b">
+            <button> SIGNUP</button>
           </NavLink>
         </li>
         <li>User</li>

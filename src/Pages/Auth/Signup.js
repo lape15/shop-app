@@ -23,7 +23,7 @@ const Signup = () => {
       <h2>Create an account</h2>
       <form onSubmit={handleSubmit}>
         <div className="content">
-          <label className={`${signUp.name.length > 0 ? "shrink" : ""}`}>
+          <label className={`${signUp.name.length ? "shrink" : ""}`}>
             Name
           </label>
           <input
@@ -34,7 +34,7 @@ const Signup = () => {
           />
         </div>
         <div className="content">
-          <label className={`${signUp.email.length > 0 ? "shrink" : ""}`}>
+          <label className={`${signUp.email.length ? "shrink" : ""}`}>
             Email
           </label>
           <input
@@ -45,7 +45,7 @@ const Signup = () => {
           />
         </div>
         <div className="content">
-          <label className={`${signUp.password.length > 0 ? "shrink" : ""}`}>
+          <label className={`${signUp.password.length ? "shrink" : ""}`}>
             Password
           </label>
           <input
@@ -56,9 +56,7 @@ const Signup = () => {
           />
         </div>
         <div className="content">
-          <label
-            className={`${signUp.confirmPassword.length > 0 ? "shrink" : ""}`}
-          >
+          <label className={`${signUp.confirmPassword.length ? "shrink" : ""}`}>
             Confirm Password
           </label>
           <input
